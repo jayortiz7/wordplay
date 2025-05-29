@@ -9,10 +9,9 @@ import {
     getLocaleLanguage,
     getLocaleRegions,
     isRevised,
-    toLocale,
+    toLocaleString,
 } from '../../locale/LocaleText';
 import type LocalePath from './LocalePath';
-import { getKeyTemplatePairs } from './LocalePath';
 import {
     DefaultLocale,
     getLocaleJSON,
@@ -21,7 +20,11 @@ import {
 } from './LocaleSchema';
 import Log from './Log';
 import { getTutorialJSON, getTutorialPath } from './TutorialSchema';
-import { createUnwrittenLocale, verifyLocale } from './verifyLocale';
+import {
+    createUnwrittenLocale,
+    getCheckableLocalePairs,
+    verifyLocale,
+} from './verifyLocale';
 import { createUnwrittenTutorial, verifyTutorial } from './verifyTutorial';
 
 // Make a logger so we can pretty print feedback.
@@ -80,7 +83,7 @@ async function handleLocale(
     localeIsNew: boolean,
     globals: Map<string, { locale: string; path: LocalePath }[]>,
 ) {
-    const locale = toLocale(localeText);
+    const locale = toLocaleString(localeText);
 
     // Validate, repair, and translate the locale file.
     const [revisedLocale, localeChanged] = await verifyLocale(
@@ -198,7 +201,7 @@ export type RevisedString = { path: LocalePath; locale: string; text: string };
 let revisedStrings: RevisedString[] = [];
 
 for (const localeText of allLocaleText) {
-    for (const path of getKeyTemplatePairs(localeText)) {
+    for (const path of getCheckableLocalePairs(localeText)) {
         if (path.isGlobalName()) {
             const key = path.resolve(localeText);
             const names = (key ? (Array.isArray(key) ? key : [key]) : []).map(
@@ -206,7 +209,9 @@ for (const localeText of allLocaleText) {
             );
             for (const name of names) {
                 if (!globals.has(name)) globals.set(name, []);
-                globals.get(name)!.push({ locale: toLocale(localeText), path });
+                globals
+                    .get(name)!
+                    .push({ locale: toLocaleString(localeText), path });
             }
         }
 
@@ -221,7 +226,7 @@ for (const localeText of allLocaleText) {
         if (revised)
             revisedStrings.push({
                 path,
-                locale: toLocale(localeText),
+                locale: toLocaleString(localeText),
                 text: revised,
             });
     }
@@ -229,7 +234,7 @@ for (const localeText of allLocaleText) {
 
 // Go through each locale, or the specific one of interest, and verify, repair, and optionally translate it.
 for (const localeText of allLocaleText) {
-    log.say(1, `Checking ${toLocale(localeText)}`);
+    log.say(1, `Checking ${toLocaleString(localeText)}`);
     await handleLocale(localeText, revisedStrings, false, globals);
 }
 
