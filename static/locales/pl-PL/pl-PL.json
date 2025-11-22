@@ -43,7 +43,8 @@
         "key": "$~klawisz",
         "help": "$~Pomoc",
         "feedback": "$~informacja zwrotna",
-        "how": "$~jak"
+        "how": "$~jak",
+        "code": "$~kod"
     },
     "token": {
         "EvalOpen": "$~ocena otwarta",
@@ -3919,6 +3920,10 @@
             "count": {
                 "doc": "$~Ile razy sekwencja powinna się powtórzyć, zanim zostanie ukończona. Jest to naprawdę pomocne, gdy wchodzę na scenę, poruszam się po scenie lub wychodzę ze sceny, ale gdy chodzi o sekwencję odpoczynku, jest ignorowane, ponieważ mogę odpoczywać wiecznie.",
                 "names": "$~liczyć"
+            },
+            "description": {
+                "doc": "$~Opcjonalny opis tej sekwencji dla widzów, którzy nie mogą zobaczyć animacji.",
+                "names": "$~opis"
             }
         },
         "Place": {
@@ -4276,7 +4281,9 @@
                 "history": {
                     "on": "$~pokaż ostatni kod projektu",
                     "off": "$~pokaż aktualny kod projektu"
-                }
+                },
+                "savedLocally": "$~projekty są zapisywane lokalnie, ale nie online",
+                "savedOnline": "$~projekty są zapisywane online"
             },
             "field": {
                 "name": {
@@ -4401,7 +4408,9 @@
             },
             "button": {
                 "selectOutput": "$~pokaż ten wynik na scenie",
-                "expandSequence": "$~rozwiń ten zwinięty kod"
+                "expandSequence": "$~rozwiń ten zwinięty kod",
+                "expandControls": "$~pokaż dodatkowe polecenia edycyjne",
+                "collapseControls": "$~ukryj dodatkowe polecenia edycyjne"
             },
             "field": {
                 "name": {
@@ -4468,7 +4477,8 @@
                 "expandBeforeInline": "$~rozszerz wybór przed",
                 "expandAfterInline": "$~rozwiń wybór po",
                 "expandPriorLine": "$~rozszerz zaznaczenie do poprzedniego wiersza",
-                "expandNextLine": "$~rozszerz zaznaczenie do następnego wiersza"
+                "expandNextLine": "$~rozszerz zaznaczenie do następnego wiersza",
+                "largeDelete": "$~Czy na pewno chcesz usunąć ten wybór? Możesz użyć przycisku cofania (↺), jeśli zmienisz zdanie."
             },
             "options": {
                 "locale": {
@@ -4520,7 +4530,8 @@
                 "submit": "$~wyślij tę wiadomość czatu"
             },
             "options": {
-                "locale": "$~wybierz język wyjścia"
+                "locale": "$~wybierz język wyjścia",
+                "default": "$~domyślny"
             }
         },
         "timeline": {
@@ -4640,10 +4651,12 @@
                     "layout": {
                         "label": "$~układ",
                         "modes": [
-                            "$~automatyczny",
-                            "$~poziomy",
-                            "$~pionowy",
-                            "$~bezpłatny"
+                            "$~układaj kafelki automatycznie",
+                            "$~układ ekranu poziomy",
+                            "$~układ ekranu pionowy",
+                            "$~dwa najnowsze kafelki obok siebie",
+                            "$~tylko najnowszy kafelek",
+                            "$~ruchome i skalowalne kafelki na płótnie"
                         ]
                     },
                     "animate": {
@@ -4693,7 +4706,8 @@
                 "options": {
                     "face": "$~krój czcionki",
                     "mic": "$~wybrany mikrofon",
-                    "camera": "$~wybrana kamera"
+                    "camera": "$~wybrana kamera",
+                    "default": "$~domyślny"
                 }
             },
             "locale": {
@@ -5424,6 +5438,10 @@
                     "fit": {
                         "label": "$~pasować",
                         "tip": "$~dopasuj kształty do płótna"
+                    },
+                    "dismissError": {
+                        "label": "$~odrzucać",
+                        "tip": "$~odrzuć komunikat o błędzie"
                     }
                 },
                 "feedback": {
@@ -5434,7 +5452,8 @@
                     "notfound": "$~Ta postać nie istnieje.",
                     "unauthenticated": "$~Musisz być zalogowany, aby edytować postać.",
                     "taken": "$~Masz już postać o tej nazwie, nie zapisujesz.",
-                    "unsaved": "$~Podaj opis tej postaci i prawidłową, unikalną nazwę, aby ją zapisać."
+                    "projecteditfail": "$~Wystąpił problem z aktualizacją projektów korzystających z tej postaci. Następujące projekty wymagają naprawy:",
+                    "untitledproject": "$~Projekt bez tytułu"
                 },
                 "announce": {
                     "position": "$~za $1$2",
@@ -5476,7 +5495,8 @@
             "unwrap": "$~odwijać się",
             "bind": "$~nazwij to wyrażenie",
             "range": "$~wybór od $1 do $2 dolarów",
-            "show": "$~… pokaż więcej"
+            "show": "$~… pokaż więcej",
+            "area": "$~wpisz kod"
         },
         "template": {
             "unwritten": "$~Do ustalenia",
@@ -5515,7 +5535,12 @@
             "skip": {
                 "tip": "$~Pomiń ten projekt",
                 "label": "$~pominąć"
-            }
+            },
+            "property": "$~Czy projekt ma tę właściwość"
+        },
+        "done": "$~Nic więcej do moderowania!",
+        "error": {
+            "notmod": "$~Wygląda na to, że nie jesteś moderatorem. Jeśli niedawno przyznano Ci uprawnienia moderatora, być może będziesz musiał się ponownie zalogować. Jeśli nie, zobacz wiki, jak poprosić o uprawnienia moderatora."
         }
     },
     "gallery": {

@@ -15,8 +15,6 @@
 <script lang="ts">
     import Emoji from '@components/app/Emoji.svelte';
     import Subheader from '@components/app/Subheader.svelte';
-    import LocalizedText from '@components/widgets/LocalizedText.svelte';
-    import Note from '@components/widgets/Note.svelte';
     import type { Snippet } from 'svelte';
     import { onMount } from 'svelte';
     import { animationDuration, locales } from '../../db/Database';
@@ -34,7 +32,6 @@
     import type Tile from './Tile';
     import { TileMode } from './Tile';
     import TileKinds from './TileKinds';
-    import TileMessage from './TileMessage.svelte';
 
     interface Props {
         project: Project;
@@ -293,7 +290,12 @@
           }px`}
     bind:this={view}
 >
-    <svelte:boundary>
+    <!-- <svelte:boundary
+        onerror={(error) => {
+            if (error instanceof Error) console.error(error.stack);
+            else console.error(error);
+        }}
+    >
         {#snippet failed(error, reset)}
             <TileMessage error>
                 <h2><LocalizedText path={(l) => l.ui.project.error.tile} /></h2>
@@ -309,8 +311,9 @@
                 >
                 <Note>{'' + error}</Note>
             </TileMessage>
-        {/snippet}
+        {/snippet} -->
 
+    {#if !tile.isInvisible()}
         <!-- Render the toolbar -->
         <div class="header" style:color={foreground} style:fill={foreground}>
             {#if !layout.isFullscreen()}
@@ -392,7 +395,8 @@
         {/if}
         <!-- Render the footer -->
         <div class="footer">{@render footer?.()}</div>
-    </svelte:boundary>
+    {/if}
+    <!-- </svelte:boundary> -->
 </section>
 
 <style>
@@ -494,7 +498,7 @@
             top ease-out,
             width ease-out,
             height ease-out;
-        transition-duration: calc(var(--animation-factor) * 200ms);
+        transition-duration: calc(var(--animation-factor) * 100ms);
     }
 
     .tile.free {

@@ -43,7 +43,8 @@
         "key": "$~nyckel",
         "help": "$~Hjälp",
         "feedback": "$~feed-back",
-        "how": "$~hur man"
+        "how": "$~hur man",
+        "code": "$~koda"
     },
     "token": {
         "EvalOpen": "$~utvärdering öppen",
@@ -3914,6 +3915,10 @@
             "count": {
                 "doc": "$~Hur många gånger sekvensen ska upprepas innan den är klar. Det här är verkligen användbart när jag går in på scenen, rör mig på scenen eller går ut på scenen, men när det gäller en vilosekvens ignoreras det, eftersom jag kan vila för evigt.",
                 "names": "$~räkna"
+            },
+            "description": {
+                "doc": "$~En valfri beskrivning av den här sekvensen för tittare som inte kan se animationen.",
+                "names": "$~beskrivning"
             }
         },
         "Place": {
@@ -4271,7 +4276,9 @@
                 "history": {
                     "on": "$~visa senaste projektkod",
                     "off": "$~visa aktuell projektkod"
-                }
+                },
+                "savedLocally": "$~projekt sparas lokalt, men inte online",
+                "savedOnline": "$~projekten sparas online"
             },
             "field": {
                 "name": {
@@ -4396,7 +4403,9 @@
             },
             "button": {
                 "selectOutput": "$~visa denna produktion på scenen",
-                "expandSequence": "$~expandera den här komprimerade koden"
+                "expandSequence": "$~expandera den här komprimerade koden",
+                "expandControls": "$~visa ytterligare redigeringskommandon",
+                "collapseControls": "$~dölj ytterligare redigeringskommandon"
             },
             "field": {
                 "name": {
@@ -4463,7 +4472,8 @@
                 "expandBeforeInline": "$~utöka urvalet innan",
                 "expandAfterInline": "$~utöka urvalet efter",
                 "expandPriorLine": "$~utöka urvalet till föregående rad",
-                "expandNextLine": "$~utöka urvalet till nästa rad"
+                "expandNextLine": "$~utöka urvalet till nästa rad",
+                "largeDelete": "$~Är du säker på att du vill ta bort det här valet? Du kan använda ångra-knappen (↺) om du ångrar dig."
             },
             "options": {
                 "locale": {
@@ -4515,7 +4525,8 @@
                 "submit": "$~skicka detta chattmeddelande"
             },
             "options": {
-                "locale": "$~välj språk för utmatning"
+                "locale": "$~välj språk för utmatning",
+                "default": "$~standard"
             }
         },
         "timeline": {
@@ -4635,10 +4646,12 @@
                     "layout": {
                         "label": "$~layout",
                         "modes": [
-                            "$~automatisk",
-                            "$~horisontell",
-                            "$~vertikal",
-                            "$~gratis"
+                            "$~lägga ut kakel automatiskt",
+                            "$~en horisontell skärmlayout",
+                            "$~en vertikal skärmlayout",
+                            "$~två senaste plattorna, sida vid sida",
+                            "$~bara den senaste plattan",
+                            "$~flyttbara och storleksanpassade plattor på en duk"
                         ]
                     },
                     "animate": {
@@ -4688,7 +4701,8 @@
                 "options": {
                     "face": "$~teckensnitt",
                     "mic": "$~vald mikrofon",
-                    "camera": "$~vald kamera"
+                    "camera": "$~vald kamera",
+                    "default": "$~standard"
                 }
             },
             "locale": {
@@ -5419,6 +5433,10 @@
                     "fit": {
                         "label": "$~färdig",
                         "tip": "$~anpassa formerna till duken"
+                    },
+                    "dismissError": {
+                        "label": "$~avfärda",
+                        "tip": "$~ignorera felmeddelandet"
                     }
                 },
                 "feedback": {
@@ -5429,7 +5447,8 @@
                     "notfound": "$~Den här karaktären finns inte.",
                     "unauthenticated": "$~Du måste vara inloggad för att redigera en karaktär.",
                     "taken": "$~Du har redan en karaktär med detta namn; inte sparar.",
-                    "unsaved": "$~Ge detta tecken en beskrivning och ett giltigt, unikt namn att spara."
+                    "projecteditfail": "$~Det uppstod ett problem när projekt som använder det här tecknet uppdaterades. Följande projekt behöver åtgärdas:",
+                    "untitledproject": "$~Namnlöst projekt"
                 },
                 "announce": {
                     "position": "$~för $1 $2",
@@ -5471,7 +5490,8 @@
             "unwrap": "$~packa upp",
             "bind": "$~namnge detta uttryck",
             "range": "$~urval från $1 till $2",
-            "show": "$~… visa mer"
+            "show": "$~… visa mer",
+            "area": "$~typkod"
         },
         "template": {
             "unwritten": "$~TBD",
@@ -5510,7 +5530,12 @@
             "skip": {
                 "tip": "$~Hoppa över det här projektet",
                 "label": "$~hoppa"
-            }
+            },
+            "property": "$~Om projektet har den här egenskapen"
+        },
+        "done": "$~Inget annat att moderera!",
+        "error": {
+            "notmod": "$~Det verkar som att du inte är moderator. Om du nyligen har fått moderatorbehörighet kan du behöva logga in igen. Om inte, se wikin för information om hur du begär modereringsbehörighet."
         }
     },
     "gallery": {

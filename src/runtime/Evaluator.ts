@@ -713,17 +713,22 @@ export default class Evaluator {
     ) {
         // Reset the non-constant expression values and any values dependent on reaction.
         if (keepConstants) {
-            for (const [expression] of this.values)
+            for (const [expression, values] of this.values)
                 if (
                     !this.project.isConstant(expression) &&
                     (this.#currentStreamDependencies === null ||
                         this.#currentStreamDependencies.has(expression))
-                )
+                ) {
                     this.values.delete(expression);
+                    for (const value of values)
+                        if (value.value)
+                            this.streamsResolved.delete(value.value);
+                }
         }
-        // Not keeping constants? Reset the value history.
+        // Not keeping constants? Reset histories entirely to avoid memory leaks.
         else {
             this.values.clear();
+            this.streamsResolved.clear();
         }
 
         // Reset the evluation stack.
@@ -732,9 +737,6 @@ export default class Evaluator {
 
         // Didn't recently step to node.
         this.#steppedToNode = false;
-
-        // Reset the streams resolved to avoid memory leaks.
-        if (!keepConstants) this.streamsResolved.clear();
 
         // Reset the stream evaluation count
         this.streamCreatorCount.clear();
@@ -1078,12 +1080,25 @@ export default class Evaluator {
         }
     }
 
+    /** Keep track of whether we're stepping to detect accidental infinite recursion. */
+    private stepping = false;
+
     /**
      * Advance one step in execution.
      * Return any exceptions or the final value when there's nothing left to execute.
      * Otherwise, return undefined, as a signal that we're still stepping.
      **/
     step(): void {
+        // Check if we're stepping. If so, it means something in the step below is causing the Evaluator
+        // to start stepping again, which should never happen.
+        if (this.stepping) {
+            console.error(
+                'Already stepping, likely infinite recursion detected.',
+            );
+            console.trace();
+        }
+        this.stepping = true;
+
         // Get the evaluation to step.
         const evaluation = this.getCurrentEvaluation();
 
@@ -1138,6 +1153,17 @@ export default class Evaluator {
         if (!this.isInPast()) {
             this.#totalStepCount++;
             this.#stepCount = this.#stepIndex;
+        }
+
+        // Done stepping, reset the flag.
+        this.stepping = false;
+
+        // If there are queued changes, react to them.
+        if (this.isDone() && this.queuedChanges.length > 0) {
+            const changes = this.queuedChanges;
+            this.queuedChanges = [];
+            // React to the changes.
+            this.evaluate(changes);
         }
     }
 
@@ -1553,7 +1579,16 @@ export default class Evaluator {
         }
     }
 
+    // Changes we haven't processed yet, because we're not done evaluating.
+    private queuedChanges: StreamValue[] = [];
+
     evaluate(changed: StreamValue[]) {
+        // If we're starting a new evaluation, but not done, add the changes to the queue and let end() evaluate them after we're done.
+        if (!this.isDone()) {
+            this.queuedChanges.push(...changed);
+            return;
+        }
+
         // One or more streams changed! Let's find out what expressions to update.
         for (const stream of changed) {
             const streamNode = stream.creator;

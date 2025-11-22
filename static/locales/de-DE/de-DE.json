@@ -43,7 +43,8 @@
         "key": "Schlüssel",
         "help": "Hilfe",
         "feedback": "Bewertung",
-        "how": "$~Wie man"
+        "how": "$~Wie man",
+        "code": "$~Code"
     },
     "token": {
         "EvalOpen": "Auswertung öffnen",
@@ -4019,6 +4020,10 @@
             "count": {
                 "doc": "$~Wie oft die Sequenz wiederholt werden soll, bevor sie beendet ist. Dies ist sehr hilfreich, wenn ich die Bühne betrete, mich auf die Bühne bewege oder sie verlasse, aber bei einer Ruhesequenz wird es ignoriert, da ich ewig ruhen kann.",
                 "names": "$~zählen"
+            },
+            "description": {
+                "doc": "$~Eine optionale Beschreibung dieser Sequenz für Zuschauer, die die Animation nicht sehen können.",
+                "names": "$~Beschreibung"
             }
         },
         "Place": {
@@ -4270,7 +4275,9 @@
                 "history": {
                     "on": "$~Aktuellen Projektcode anzeigen",
                     "off": "$~aktuellen Projektcode anzeigen"
-                }
+                },
+                "savedLocally": "$~Projekte werden lokal, aber nicht online gespeichert",
+                "savedOnline": "$~Projekte werden online gespeichert"
             },
             "field": {
                 "name": {
@@ -4378,7 +4385,9 @@
             },
             "button": {
                 "selectOutput": "$~diese Ausgabe auf der Bühne zeigen",
-                "expandSequence": "$~Erweitern Sie diesen ausgeblendeten Code"
+                "expandSequence": "$~Erweitern Sie diesen ausgeblendeten Code",
+                "expandControls": "$~zusätzliche Bearbeitungsbefehle anzeigen",
+                "collapseControls": "$~zusätzliche Bearbeitungsbefehle ausblenden"
             },
             "field": {
                 "name": {
@@ -4445,7 +4454,8 @@
                 "expandBeforeInline": "$~Auswahl erweitern vor",
                 "expandAfterInline": "$~Auswahl erweitern nach",
                 "expandPriorLine": "$~Auswahl bis zur vorherigen Zeile erweitern",
-                "expandNextLine": "$~Auswahl bis zur nächsten Zeile erweitern"
+                "expandNextLine": "$~Auswahl bis zur nächsten Zeile erweitern",
+                "largeDelete": "$~Möchten Sie diese Auswahl wirklich löschen? Sie können die Auswahl mit dem Rückgängig-Button (↺) rückgängig machen."
             },
             "options": {
                 "locale": {
@@ -4497,7 +4507,8 @@
                 "submit": "$~diese Chat-Nachricht senden"
             },
             "options": {
-                "locale": "$~Wählen Sie die Sprache für die Ausgabe"
+                "locale": "$~Wählen Sie die Sprache für die Ausgabe",
+                "default": "$~Standard"
             }
         },
         "timeline": {
@@ -4617,10 +4628,12 @@
                     "layout": {
                         "label": "$~Layout",
                         "modes": [
-                            "$~automatisch",
-                            "$~horizontal",
-                            "$~Vertikale",
-                            "$~frei"
+                            "$~Kacheln automatisch auslegen",
+                            "$~ein horizontales Bildschirmlayout",
+                            "$~ein vertikales Bildschirmlayout",
+                            "$~die beiden aktuellsten Kacheln nebeneinander",
+                            "$~nur die aktuellste Kachel",
+                            "$~verschiebbare und in der Größe veränderbare Kacheln auf einer Leinwand"
                         ]
                     },
                     "animate": {
@@ -4670,7 +4683,8 @@
                 "options": {
                     "mic": "$~ausgewähltes Mikrofon",
                     "camera": "$~ausgewählte Kamera",
-                    "face": "$~Schriftart"
+                    "face": "$~Schriftart",
+                    "default": "$~Standard"
                 }
             },
             "locale": {
@@ -5364,6 +5378,10 @@
                     "fit": {
                         "label": "$~fit",
                         "tip": "$~Passen Sie die Formen an die Leinwand an"
+                    },
+                    "dismissError": {
+                        "label": "$~zurückweisen",
+                        "tip": "$~die Fehlermeldung verwerfen"
                     }
                 },
                 "feedback": {
@@ -5374,7 +5392,8 @@
                     "notfound": "$~Dieses Zeichen existiert nicht.",
                     "unauthenticated": "$~Sie müssen angemeldet sein, um einen Charakter bearbeiten zu können.",
                     "taken": "$~Sie haben bereits einen Charakter mit diesem Namen; wird nicht gespeichert.",
-                    "unsaved": "$~Geben Sie diesem Charakter eine Beschreibung und einen gültigen, eindeutigen Namen zum Speichern."
+                    "projecteditfail": "$~Beim Aktualisieren von Projekten, die dieses Zeichen verwenden, ist ein Problem aufgetreten. Die folgenden Projekte müssen behoben werden:",
+                    "untitledproject": "$~Unbenanntes Projekt"
                 },
                 "announce": {
                     "position": "$~bei $1 $2",
@@ -5416,7 +5435,8 @@
             "unwrap": "$~auspacken",
             "bind": "$~Nennen Sie diesen Ausdruck",
             "range": "$~Auswahl von $1 bis $2",
-            "show": "$~… mehr anzeigen"
+            "show": "$~… mehr anzeigen",
+            "area": "$~Typenschlüssel"
         },
         "template": {
             "unwritten": "$~Wird noch bekannt gegeben",
@@ -5509,7 +5529,12 @@
             "skip": {
                 "tip": "$~Dieses Projekt überspringen",
                 "label": "$~überspringen"
-            }
+            },
+            "property": "$~Ob das Projekt diese Eigenschaft hat"
+        },
+        "done": "$~Sonst nichts zu moderieren!",
+        "error": {
+            "notmod": "$~Offenbar bist du kein Moderator. Falls du erst kürzlich Moderatorrechte erhalten hast, musst du dich möglicherweise erneut anmelden. Falls nicht, findest du im Wiki Informationen zum Beantragen von Moderationsrechten."
         }
     },
     "gallery": {

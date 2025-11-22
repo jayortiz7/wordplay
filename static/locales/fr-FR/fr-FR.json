@@ -7,13 +7,13 @@
         "evaluate": "$~évaluer",
         "bind": "$~lier",
         "decide": "$~décider",
-        "document": "$~expliquer",
+        "document": "documenter",
         "project": "$~projet",
         "source": "$~source",
-        "input": "$~saisir",
-        "output": "$~sortir",
+        "input": "entrée",
+        "output": "sortie",
         "convert": "$~convertir",
-        "act": "$~acte",
+        "act": "agir",
         "scene": "$~scène",
         "phrase": "$~phrase",
         "group": "$~groupe",
@@ -38,22 +38,23 @@
         "structure": "$~structure",
         "index": "$~indice",
         "query": "$~requête",
-        "row": "$~rangée",
+        "row": "ligne",
         "set": "$~ensemble",
         "key": "$~clé",
-        "help": "$~Aide",
-        "feedback": "$~retour",
-        "how": "$~comment faire"
+        "help": "$~aide",
+        "feedback": "retour",
+        "how": "$~comment faire",
+        "code": "$~code"
     },
     "token": {
         "EvalOpen": "$~évaluation ouverte",
-        "EvalClose": "$~clôture de l'évaluation",
+        "EvalClose": "fermer l'évaluation",
         "SetOpen": "$~ensemble/carte ouvert",
         "SetClose": "$~fermer l'ensemble/la carte",
         "ListOpen": "$~liste ouverte",
         "ListClose": "$~liste fermée",
         "TagOpen": "$~balise ouverte",
-        "TagClose": "$~balise fermer",
+        "TagClose": "balise fermée",
         "Bind": "$~lier",
         "Access": "$~accès à la propriété",
         "Function": "$~fonction",
@@ -68,7 +69,7 @@
         "Italic": "$~italique",
         "Underline": "$~souligner",
         "Light": "$~lumière",
-        "Bold": "$~audacieux",
+        "Bold": "gras",
         "Extra": "$~supplémentaire",
         "Concept": "$~lien conceptuel",
         "URL": "$~URL",
@@ -77,16 +78,16 @@
         "Otherwise": "$~sinon",
         "Match": "$~correspondre",
         "None": "$~rien",
-        "Type": "$~taper",
+        "Type": "type",
         "Literal": "$~littéral",
         "TypeOperator": "$~est",
-        "TypeOpen": "$~type d'entrée ouvert",
-        "TypeClose": "$~type d'entrée fermer",
+        "TypeOpen": "type ouvert",
+        "TypeClose": "fermer le type",
         "Separator": "$~séparateur de nom",
         "Language": "$~balise de langue",
-        "Region": "$~tiret de région",
+        "Region": "région",
         "BooleanType": "$~type booléen",
-        "NumberType": "$~type de numéro",
+        "NumberType": "type de nombre",
         "JapaneseNumeral": "$~chiffre japonais",
         "RomanNumeral": "$~chiffre romain",
         "Pi": "$~pi",
@@ -98,19 +99,19 @@
         "Update": "$~mise à jour",
         "Delete": "$~supprimer",
         "Union": "$~union",
-        "Stream": "$~suivant",
+        "Stream": "flux",
         "Change": "$~changement",
-        "Initial": "$~première évaluation",
+        "Initial": "initial",
         "Previous": "$~précédent",
         "Placeholder": "$~espace réservé",
-        "Etc": "$~et cetera",
+        "Etc": "etc.",
         "This": "$~ce",
         "Operator": "$~opérateur",
         "Conditional": "$~conditionnel",
         "Text": "$~texte",
         "Number": "$~nombre",
         "Decimal": "$~nombre décimal",
-        "Base": "$~nombre de base",
+        "Base": "base",
         "Boolean": "$~booléen",
         "Name": "$~nom",
         "Unknown": "$~inconnu",
@@ -4020,6 +4021,10 @@
             "count": {
                 "doc": "$~Combien de fois la séquence doit-elle se répéter avant d'être terminée. C'est vraiment utile lorsque j'entre sur scène, que je me déplace sur scène ou que je sors de scène, mais lorsqu'il s'agit d'une séquence de repos, c'est ignoré, car je peux me reposer indéfiniment.",
                 "names": "$~compter"
+            },
+            "description": {
+                "doc": "$~Une description facultative de cette séquence pour les spectateurs qui ne peuvent pas voir l'animation.",
+                "names": "$~description"
             }
         },
         "Place": {
@@ -4271,7 +4276,9 @@
                 "history": {
                     "on": "$~afficher le code du projet récent",
                     "off": "$~afficher le code du projet actuel"
-                }
+                },
+                "savedLocally": "$~les projets sont enregistrés localement, mais pas en ligne",
+                "savedOnline": "$~les projets sont enregistrés en ligne"
             },
             "field": {
                 "name": {
@@ -4379,7 +4386,9 @@
             },
             "button": {
                 "selectOutput": "$~montrer cette sortie sur scène",
-                "expandSequence": "$~développer ce code réduit"
+                "expandSequence": "$~développer ce code réduit",
+                "expandControls": "$~afficher des commandes d'édition supplémentaires",
+                "collapseControls": "$~masquer les commandes d'édition supplémentaires"
             },
             "field": {
                 "name": {
@@ -4446,7 +4455,8 @@
                 "expandBeforeInline": "$~élargir la sélection avant",
                 "expandAfterInline": "$~développer la sélection après",
                 "expandPriorLine": "$~étendre la sélection à la ligne précédente",
-                "expandNextLine": "$~étendre la sélection à la ligne suivante"
+                "expandNextLine": "$~étendre la sélection à la ligne suivante",
+                "largeDelete": "$~Êtes-vous sûr de vouloir supprimer cette sélection ? Vous pouvez utiliser le bouton Annuler (↺) si vous changez d'avis."
             },
             "options": {
                 "locale": {
@@ -4498,7 +4508,8 @@
                 "submit": "$~soumettre ce message de discussion"
             },
             "options": {
-                "locale": "$~choisir la langue de sortie"
+                "locale": "$~choisir la langue de sortie",
+                "default": "$~défaut"
             }
         },
         "timeline": {
@@ -4618,10 +4629,12 @@
                     "layout": {
                         "label": "$~mise en page",
                         "modes": [
-                            "$~automatique",
-                            "$~horizontal",
-                            "$~verticale",
-                            "$~gratuit"
+                            "$~disposer les tuiles automatiquement",
+                            "$~une disposition d'écran horizontale",
+                            "$~une disposition d'écran verticale",
+                            "$~les deux tuiles les plus récentes, côte à côte",
+                            "$~seulement la tuile la plus récente",
+                            "$~tuiles mobiles et redimensionnables sur une toile"
                         ]
                     },
                     "animate": {
@@ -4671,7 +4684,8 @@
                 "options": {
                     "mic": "$~microphone sélectionné",
                     "camera": "$~caméra sélectionnée",
-                    "face": "$~police de caractère"
+                    "face": "$~police de caractère",
+                    "default": "$~défaut"
                 }
             },
             "locale": {
@@ -5365,6 +5379,10 @@
                     "fit": {
                         "label": "$~ajuster",
                         "tip": "$~adapter les formes à la toile"
+                    },
+                    "dismissError": {
+                        "label": "$~rejeter",
+                        "tip": "$~ignorer le message d'erreur"
                     }
                 },
                 "feedback": {
@@ -5375,7 +5393,8 @@
                     "notfound": "$~Ce personnage n'existe pas.",
                     "unauthenticated": "$~Vous devez être connecté pour modifier un personnage.",
                     "taken": "$~Vous avez déjà un personnage avec ce nom; vous ne sauvegardez pas.",
-                    "unsaved": "$~Donnez à ce personnage une description et un nom valide et unique à sauvegarder."
+                    "projecteditfail": "$~Un problème est survenu lors de la mise à jour des projets utilisant ce personnage. Les projets suivants doivent être corrigés :",
+                    "untitledproject": "$~Projet sans titre"
                 },
                 "announce": {
                     "position": "$~à $1 $2",
@@ -5417,7 +5436,8 @@
             "unwrap": "$~déballer",
             "bind": "$~nomme cette expression",
             "range": "$~sélection de $1 à $2",
-            "show": "$~… afficher plus"
+            "show": "$~… afficher plus",
+            "area": "$~code de type"
         },
         "template": {
             "unwritten": "$~À déterminer",
@@ -5510,7 +5530,12 @@
             "skip": {
                 "tip": "$~Ignorer ce projet",
                 "label": "$~sauter"
-            }
+            },
+            "property": "$~Si le projet possède cette propriété"
+        },
+        "done": "$~Rien d'autre à modérer !",
+        "error": {
+            "notmod": "$~Il semble que vous n'êtes pas modérateur. Si vous avez récemment obtenu des privilèges de modérateur, vous devrez peut-être vous reconnecter. Sinon, consultez le wiki pour savoir comment demander des privilèges de modération."
         }
     },
     "gallery": {

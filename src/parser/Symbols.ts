@@ -1,3 +1,5 @@
+import { withMonoEmoji } from '../unicode/emoji';
+
 export const TYPE_SYMBOL = '•';
 export const LITERAL_SYMBOL = '!';
 export const LITERAL_SYMBOL_FULL = '！';
@@ -114,7 +116,7 @@ export const COPY_SYMBOL = '📚';
 export const PASTE_SYMBOL = '📋';
 export const CANCEL_SYMBOL = '⨉';
 export const CONFIRM_SYMBOL = '✓';
-export const ALL_SYMBOL = '⊞';
+export const ALL_SYMBOL = '⬚';
 export const ERASE_SYMBOL = '⌫';
 
 // The "teacher" emoji is a combination of the "person" and "school" emojis.
@@ -127,7 +129,7 @@ export const REDO_SYMBOL = '⟳';
 
 export const DRAFT_SYMBOL = '🚧';
 
-export const LOCALE_SYMBOL = GLOBE1_SYMBOL;
+export const LOCALE_SYMBOL = withMonoEmoji(GLOBE1_SYMBOL);
 
 export const IDEA_SYMBOL = '💡';
 export const DEFECT_SYMBOL = '🪲';

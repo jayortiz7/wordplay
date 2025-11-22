@@ -155,6 +155,10 @@ type UITexts = {
             focusPalette: string;
             /** Keyboard shortcut to cycle between tiles */
             focusCycle: string;
+            /** Tooltip for saved or saving status locally */
+            savedLocally: string;
+            /** Tooltip for saved or saving status online */
+            savedOnline: string;
             /** Show save error button */
             unsaved: string;
             /** Show translation button */
@@ -227,6 +231,10 @@ type UITexts = {
             selectOutput: string;
             /** The button shown when a list of code is ellided; clicking it shows the hidden code. */
             expandSequence: string;
+            /** The button tooltip for expanding the controls accordion */
+            expandControls: string;
+            /** The button tooltip for collapsing the controls accordion */
+            collapseControls: string;
         };
         menu: {
             /** How to describe the autocomplete menu */
@@ -353,6 +361,8 @@ type UITexts = {
             tidy: string;
             /** Toggle elision */
             elide: string;
+            /** Large deletion notification */
+            largeDelete: string;
         };
         error: {
             /** An invalid source name */
@@ -406,6 +416,8 @@ type UITexts = {
         options: {
             /** The label for the locale chooser in output */
             locale: string;
+            /** The default locale for the output */
+            default: string;
         };
     };
     /** The documentation browser */
@@ -698,7 +710,9 @@ type UITexts = {
             };
             mode: {
                 /** The project tile layout mode */
-                layout: ModeText<[string, string, string, string]>;
+                layout: ModeText<
+                    [string, string, string, string, string, string]
+                >;
                 /** The animation on/off/slowdown mode */
                 animate: ModeText<
                     [
@@ -728,6 +742,8 @@ type UITexts = {
                 mic: string;
                 /** The label for the camera drop down */
                 camera: string;
+                /** The label for default device */
+                default: string;
             };
         };
         /** The locale chooser dialog */

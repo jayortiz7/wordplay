@@ -1,10 +1,10 @@
 <script lang="ts">
+    import { getTip } from '@components/project/Contexts';
     import { locales } from '@db/Database';
     import type LocaleText from '@locale/LocaleText';
     import { type Snippet } from 'svelte';
     import type { ToggleText } from '../../locale/UITexts';
     import { toShortcut, type Command } from '../editor/util/Commands';
-    import CommandHint from './CommandHint.svelte';
 
     interface Props {
         tips: (locale: LocaleText) => ToggleText;
@@ -46,6 +46,16 @@
             command ? ' (' + toShortcut(command) + ')' : ''
         }`,
     );
+
+    let view = $state<HTMLButtonElement | undefined>(undefined);
+
+    let hint = getTip();
+    function showTip() {
+        if (view) hint.show(title, view);
+    }
+    function hideTip() {
+        hint.hide();
+    }
 </script>
 
 <!-- 
@@ -59,16 +69,22 @@
     data-uiid={uiid}
     data-testid={testid}
     class:on
-    {title}
     aria-label={title}
     aria-disabled={!active}
     aria-pressed={on}
     ondblclick={(event) => event.stopPropagation()}
     onmousedown={(event) => event.preventDefault()}
+    bind:this={view}
+    onpointerenter={showTip}
+    onpointerleave={hideTip}
+    onfocus={showTip}
+    onblur={hideTip}
+    ontouchstart={showTip}
+    ontouchend={hideTip}
+    ontouchcancel={hideTip}
     onclick={(event) =>
         event.button === 0 && active ? doToggle(event) : undefined}
 >
-    {#if command}<CommandHint {command} />{/if}
     <div class="icon">
         {@render children()}
     </div>
@@ -84,7 +100,7 @@
         user-select: none;
         border: none;
         border-radius: var(--wordplay-border-radius);
-        background: var(--wordplay-alternating-color);
+        background: none;
         color: currentColor;
         stroke: currentColor;
         fill: var(--wordplay-background);
@@ -124,7 +140,8 @@
         color: var(--wordplay-foreground);
         stroke: var(--wordplay-background);
         fill: var(--wordplay-background);
-        box-shadow: inset 1px 2px var(--wordplay-chrome);
+        box-shadow: inset 2px 2px var(--wordplay-chrome);
+        background: var(--wordplay-alternating-color);
     }
 
     button.on .icon {

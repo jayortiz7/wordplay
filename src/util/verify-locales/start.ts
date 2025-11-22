@@ -20,6 +20,7 @@ import {
 } from './LocaleSchema';
 import Log from './Log';
 import { getTutorialJSON, getTutorialPath } from './TutorialSchema';
+import { verifyHowTo } from './verifyHowTo';
 import {
     createUnwrittenLocale,
     getCheckableLocalePairs,
@@ -50,7 +51,9 @@ if (!LocaleValidator(DefaultLocale)) {
 }
 
 // We're we asked to translate? Let's see if there was a specific locale we're focusing on.
-const TranslationRequested = process.argv.includes('translate');
+const TranslationRequested =
+    process.argv[2] === 'translate' || process.argv[2] === 'override';
+const OverrideMachineTranslations = process.argv[2] === 'override';
 const FocalLocale = process.argv[3] ?? null;
 
 const FocalLanguage = FocalLocale ? getLocaleLanguage(FocalLocale) : null;
@@ -91,6 +94,7 @@ async function handleLocale(
         locale,
         localeText as LocaleText,
         TranslationRequested,
+        OverrideMachineTranslations,
         revisedStrings,
         globals,
     );
@@ -139,6 +143,7 @@ async function handleLocale(
             revisedLocale,
             currentTutorial,
             TranslationRequested,
+            OverrideMachineTranslations,
         );
 
         // If the tutorial was revised, write the results.
@@ -160,6 +165,16 @@ async function handleLocale(
             }
         } else log.good(1, 'No changes necessary in ' + locale + ' tutorial');
     }
+
+    // Verify and optionally translate how-to content
+    await verifyHowTo(
+        log,
+        locale,
+        localeText.language,
+        localeText.regions,
+        TranslationRequested,
+        OverrideMachineTranslations,
+    );
 }
 
 // Build a database of all locales

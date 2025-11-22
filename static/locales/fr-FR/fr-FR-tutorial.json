@@ -4,57 +4,57 @@
     "regions": ["FR"],
     "acts": [
         {
-            "title": "$~Le verset",
+            "title": "Le Vers",
             "performance": ["use", "fit", "DarkVoid"],
             "scenes": [
                 {
-                    "title": "$~Silence",
+                    "title": "Silence",
                     "subtitle": null,
                     "performance": ["use", "fit", "DarkVoid"],
                     "lines": [
-                        ["FunctionDefinition", "bored", "$~… Oh, salut."],
+                        ["FunctionDefinition", "bored", "… Ah, bonjour."],
                         null,
-                        ["FunctionDefinition", "neutral", "$~Je vous connais?"],
+                        ["FunctionDefinition", "neutral", "Je te connais?"],
                         null,
                         [
                             "FunctionDefinition",
                             "curious",
-                            "$~Oh, c'est la première fois que tu viens ici ?",
-                            "$~Enchanté de vous rencontrer. Je m'appelle @FunctionDefinition.",
-                            "$~…"
+                            "Oh, c'est ta première visite?",
+                            "Enchanté. Je m'appelle @FunctionDefinition.",
+                            "…"
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "curious",
-                            "$~Avez-vous besoin d'aide ? Oh, vous êtes en visite. Bienvenue dans le *Verse*. …"
+                            "Tu veux de l’aide? Oh, tu es en visite. Bienvenue dans le *Vers*. …"
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "bored",
-                            "$~Quel est cet endroit ?",
-                            "$~Ouais, c'est quoi cet endroit...",
-                            "$~C'était autrefois un lieu de danse, d'histoires, de jeux et de divertissements...",
-                            "$~On y donnait les plus beaux spectacles. Parfois pour des visiteurs comme vous, parfois juste pour le plaisir. C'était un endroit plein de vie et de surprises..."
+                            "Quel est cet endroit?",
+                            "Oui, quel est cet endroit…",
+                            "C’était autrefois un lieu de danse, d’histoires et de jeux…",
+                            "On faisait les plus beaux spectacles. Parfois pour des visiteurs comme toi, parfois juste pour le plaisir. C’était un endroit plein de vie et de surprises…"
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "sad",
-                            "$~Arrêt?",
-                            "$~Nous ne voulions pas nous arrêter, nous avons simplement perdu notre inspiration.",
-                            "$~Je peux signifier tant de choses, par exemple. Je suis parfois le symbole du florin néerlandais, une ancienne monnaie des Pays-Bas. J'étais autrefois connu et utilisé dans le monde entier pour les aider à faire du commerce. Il y a longtemps, j'étais aussi le /f/ minuscule de l'alphabet latin.",
-                            "$~Aujourd’hui, cependant, je suis assez obscur."
+                            "Arrêt?",
+                            "On ne voulait pas s'arrêter. On a perdu notre inspiration.",
+                            "Je peux être tellement de choses, par exemple. Je suis parfois le symbole du florin néerlandais, une ancienne monnaie des Pays-Bas. J'étais connu et utilisé dans le monde entier par des gens pour les aider à faire du commerce. Il y a longtemps, j’étais aussi le /f/ minuscule de l’alphabet latin.",
+                            "Mais maintenant, je suis assez obscur."
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "bored",
-                            "$~Mais tout cela a du sens ?",
-                            "$~Elle nous est donnée. Nous ne sommes rien sans les gens qui se souviennent de cette histoire et de cette culture. Et nous ne pouvons rien signifier de nouveau s'il n'y a pas de gens qui nous donnent une histoire et une culture nouvelles.",
-                            "$~Les gens ont toujours été ceux qui nous ont organisés, qui nous ont donné un but, qui nous ont donné quelque chose à représenter. Le Verset n'est rien sans *les gens*.",
-                            "$~Et je n'ai vu personne depuis des lustres."
+                            "Mais tout ce sens...",
+                            "C'est donné par les gens. On n'a pas de sens sans des gens pour se souvenir de cette histoire et de cette culture. Et on ne peut rien signifier de nouveau s'il n'y a pas de gens pour nous donner de nouvelles histoires et cultures.",
+                            "Ce sont toujours les gens qui nous ont organisés, qui nous ont donné un but, qui nous ont donné quelque chose à représenter. Le Vers n’est rien sans des *gens*.",
+                            "Et ça fait longtemps que je n’ai pas vu une seule personne."
                         ],
                         null,
                         [
@@ -64,7 +64,7 @@
                         [
                             "FunctionDefinition",
                             "curious",
-                            "$~Attends... es-tu une personne ?"
+                            "Attends... es-tu une personne?"
                         ],
                         null,
                         [
@@ -74,13 +74,13 @@
                         [
                             "FunctionDefinition",
                             "eager",
-                            "$~Comme une vraie personne, avec des pensées, des idées et des valeurs à partager ? Pas un de ces robots qui répètent sans réfléchir ce que les gens disent ? Si vous êtes une personne, alors peut-être pourriez-vous nous donner un sens ?"
+                            "Une vraie personne, avec des pensées, des idées et des valeurs à partager? Pas un de ces robots qui répètent sans réfléchir ce que les gens disent? Si tu es une personne, alors peut-être que tu pourrais nous donner un sens?"
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "scared",
-                            "$~Je sais que c'est beaucoup demander. Je ne te connais même pas. Et il faudrait vraiment que j'en parle aux autres..."
+                            "Je sais que c'est beaucoup demander. Je ne te connais même pas. Et il faudrait vraiment que je parle aux autres…"
                         ],
                         null,
                         [
@@ -90,13 +90,13 @@
                         [
                             "FunctionDefinition",
                             "eager",
-                            "$~Ah oui, il y en a beaucoup d'autres. Certains sont comme moi : nous participons à la chorégraphie des spectacles, nous mettons tout le monde à sa place et nous nous assurons que nous exprimons la vision de notre metteur en scène, exactement comme il l'a voulu. Et certains d'entre eux sont ceux qui sont sur scène, devant le public, qui dansent et parlent. Nous avons tous un rôle à jouer !"
+                            "Ah oui, il y en a bien d’autres. Certaines sont comme moi : on aide à organiser les spectacles, à garder tout le monde à sa place et à s’assurer qu’on exprime bien la vision de le boss, exactement comme cela a été imaginé. Et certaines sont celles qui sont sur scène, devant le public, à danser et à parler. On a toutes et tous un rôle à jouer!"
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "serious",
-                            "$~Ah oui, le metteur en scène, je ne l'ai même pas expliqué. Donc le *metteur en scène*, c'est la personne qui nous donne du sens. C'est la personne qui organise la chorégraphie, qui définit le message, qui nous met tous en ordre. C'est l'inspiration dont je parlais. Nous pouvons faire beaucoup de choses dans ce monde, mais nous ne pouvons pas nous diriger nous-mêmes. C'est pourquoi le metteur en scène est si important. Donc quand je vous ai demandé plus tôt si vous pouviez nous donner du sens, c'est ce que je voulais dire. Pourriez-vous être notre metteur en scène ?"
+                            "Ah, le boss, oui, je n'ai même pas expliqué. Alors, le *boss*, c’est la personne qui nous donne du sens. C’est celle qui organise la chorégraphie, qui définit le message, qui nous place tous exactement là où il faut. C’est ça, l’inspiration dont je parlais. On peut faire beaucoup de choses dans ce monde, mais on ne peut pas se diriger nous-mêmes. C’est pour ça que le boss est si important. Alors, quand je t’ai demandé plus tôt si tu pouvais nous donner du sens, c’est ça que je voulais dire. Est-ce que tu pourrais être notre boss?"
                         ],
                         null,
                         [
@@ -106,7 +106,7 @@
                         [
                             "FunctionDefinition",
                             "excited",
-                            "$~Vraiment ? C'est merveilleux ! Cela va être très amusant. Je veux dire, ce ne sera pas facile. Nous avons beaucoup à apprendre."
+                            "Vraiment? C’est génial! Ça va être super amusant. Bon, ce ne sera pas facile. On a /beaucoup/ à apprendre."
                         ],
                         null,
                         [
@@ -116,7 +116,7 @@
                         [
                             "FunctionDefinition",
                             "excited",
-                            "$~Mais je vous promets que ce ne sera pas ennuyeux. Je pense que nous sommes un groupe plutôt sympa. Et nous avons besoin que tout le monde dans le Verse se rassemble pour faire ça. Je pense que c'est ce qui rend cet endroit si spécial, en fait : nous sommes plus de cent mille ici, chacun différent, et pourtant, d'une manière ou d'une autre, lorsque nous parvenons à trouver une vision commune, nous pouvons sembler ne faire qu'un."
+                            "Mais je promets que ça ne sera pas ennuyeux. Je pense qu’on est un groupe assez sympa. Et on a besoin de tout le monde dans le Vers pour y arriver. Je pense que c’est ça qui rend cet endroit si spécial, en fait : il y a plus de cent mille d’entre nous ici, chacun différent, et pourtant, quand on réussit à trouver une vision commune, on peut sembler n’être qu’un seul groupe."
                         ],
                         null,
                         [
@@ -126,13 +126,13 @@
                         [
                             "FunctionDefinition",
                             "bored",
-                            "$~Réalisation ? Ah oui, réalisation ! Ouais, parlons-en. Allons rencontrer d'autres personnes et parlons-en. Ils vont être tellement excités !"
+                            "Diriger? Ah, oui, diriger! Ouais, parlons-en. Allons rencontrer les autres et en discuter. Ils vont être trop contents!"
                         ]
                     ]
                 },
                 {
-                    "title": "$~Souhaitez-vous un programme ?",
-                    "subtitle": "$~Programme",
+                    "title": "Tu voudrais un programme?",
+                    "subtitle": "Programme",
                     "concept": "Program",
                     "performance": ["use", "fit", "Symbol", "📄"],
                     "lines": [
@@ -140,56 +140,56 @@
                         [
                             "FunctionDefinition",
                             "excited",
-                            "$~Hé, @Program ! J'ai trouvé une personne. Bon, je suppose qu'elle nous a trouvés. Elle veut être notre nouveau directeur !"
+                            "Hé @Program, j'ai trouvé une personne! En fait, je suppose qu'iel nous ont trouvés.. Iel veut être notre nouveau directeur !!"
                         ],
                         [
                             "Program",
                             "curious",
-                            "$~Vraiment ? Es-tu sûr d'être vraiment une personne ? Dis quelque chose qu'une personne dirait."
+                            "Vraiment!? Une vraie personne? Vous ne ressemblez pas à une machine!"
                         ],
                         null,
                         ["fit", "Phrase('📄' entering: Sequence(spin() 1s))"],
                         [
                             "Program",
                             "serious",
-                            "$~Hm… tu es vraiment une personne. Et tu veux réaliser ?"
+                            "Hmm… tu es vraiment une personne, et tu veux vraiment diriger?"
                         ],
                         null,
                         ["fit", "Phrase('📄' resting: Pose(rotation: 010°))"],
                         [
                             "Program",
                             "excited",
-                            "$~Je vois. @FunctionDefinition t'a-t-il dit quelque chose sur nous ? Beaucoup de gens essaient de nous orienter, mais certaines personnes sont confuses, s'ennuient ou même s'irritent à notre égard. Nous sommes assez bornés parfois. Mais je suis fier de ce que nous faisons, donc je ne veux pas travailler avec n'importe qui."
+                            "Je vois. Est-ce que @FunctionDefinition t'a dit quelque chose sur nous ? Beaucoup de gens essaient de nous diriger, mais certains se perdent, s'ennuient, ou même se fâchent. On est parfois un peu dense. Mais je suis fier de ce qu'on fait, donc je veux pas travailler avec n'importe qui."
                         ],
                         null,
                         [
                             "FunctionDefinition",
                             "kind",
-                            "$~Je leur ai dit un peu. J'ai dit que nous étions bizarres, et que parfois les réalisateurs partaient à cause de ça. Mais ils étaient partants. Pas vrai, toi tu es partant ?"
+                            "Je leur ai dit un peu. J'ai dit qu'on était un peu bizarres, et que parfois les directeurs partent à cause de ça. Mais ils sont là. Enfin, tu es là, non?"
                         ],
                         [
                             "Program",
                             "serious",
-                            "$~Ok. Eh bien, ravi de vous rencontrer. Désolé, beaucoup de gens sont venus ici et ont dit « /ce n'est pas pour moi/ », et je suis devenu un peu sceptique envers les gens qui essaient un peu et abandonnent ensuite. Je ne devrais pas avoir à changer qui je suis pour correspondre aux attentes des gens. Mais si vous êtes prêt à en apprendre davantage sur moi et sur nous, essayons !"
+                            "D'accord. Enchanté. Désolé, j'ai eu pas mal de gens qui sont venus ici et qui ont dit ‘/ça n’est pas pour moi/’, du coup je suis un peu sceptique envers ceux qui essaient un moment et puis abandonnent. Je ne devrais pas avoir à changer qui je suis pour répondre aux attentes des autres. Mais si tu es prêt(e) à apprendre à me connaître, et à nous connaître, alors essayons!"
                         ],
                         null,
                         ["edit", ""],
                         [
                             "FunctionDefinition",
                             "neutral",
-                            "$~Voulez-vous dire ce que vous faites ?"
+                            "Alors, tu veux nous dire ce que tu fais, toi?"
                         ],
                         [
                             "Program",
                             "neutral",
-                            "$~Bien sûr, je suis en fait l'organisateur du programme d'une représentation.",
-                            "$~Vous pouvez me voir là-bas avec un *éditeur* @UI/editor qui me montre la *scène* @UI/stage qui montre ce que j'évalue (rien actuellement). Le *réalisateur* — c'est-à-dire vous — aide tout le monde à comprendre ce qu'il fait, en écrivant un programme pour ce qui se passera dans le spectacle. Et puis j'évalue le programme et je mets le résultat sur scène pour que le public le voie."
+                            "Bien sûr. En gros, je suis l'organisateur du programme pour une performance.",
+                            "Tu peux me voir là-bas avec un·e *éditeur·rice* @UI/editor montrant le *scène* @UI/stage pour me montrer ce que j’évalue (actuellement rien). Le *boss* — c’est toi — aide tout le monde à comprendre ce qu'ils font, en écrivant un programme pour ce qui va se passer dans le spectacle. Et puis, moi, j’évalue le programme et je mets le résultat sur scène pour que le public puisse voir."
                         ],
                         null,
                         [
                             "Program",
                             "neutral",
-                            "$~Par exemple, essayez de taper «bonjour» dans l’éditeur là-bas.",
+                            "Par exemple, essaie d’écrire \\'bonjour'\\ dans l’éditeur là-bas.",
                             "$~(Ne vous inquiétez pas de faire des erreurs, vous pouvez toujours revenir à l'original avec *revert* @UI/revertProject).",
                             "$~Tu as tapé quelque chose ? C'est mon ami @Text. Tu les as déjà rencontrés ? Ils évaluent en \\'hello'\\ ou tout autre texte que tu tapes, puis ce texte est placé sur scène. Essaie de changer ton texte en quelque chose d'autre. Je vais plutôt te montrer ça. J'évaluerai donc immédiatement ce que tu tapes et montrerai le résultat."
                         ],
@@ -3347,7 +3347,7 @@
                             "Phrase",
                             "sad",
                             "$~Oh mon Dieu, mon Dieu, mon Dieu, je ne peux pas croire que j'ai oublié la couleur. Ok, donc n'importe quelle @Pose peut avoir une couleur, n'est-ce pas ? Mais @Color se compose de trois parties. Tout d'abord, une @Pose entre 0 et 100 %, que vous pouvez considérer comme la luminosité d'une pièce, du noir au blanc avec une couleur au milieu à 50 %.",
-                            "$~Ensuite, un @Color/chroma entre 0 et 100, qui vous permet de penser à la quantité de couleur qu'il y a, depuis aucune couleur grise jusqu'à la couleur complète.",
+                            "$~Ensuite, un @Color/chroma entre 0 et ∞, qui vous permet de penser à la quantité de couleur qu'il y a, depuis aucune couleur grise jusqu'à la couleur complète.",
                             "$~Et enfin, une @Color/hue, que vous pouvez considérer comme une roue chromatique, du rouge au vert au bleu en degrés. Vous voulez donc que je sois rouge vif ? Réglez ma couleur de pose de repos sur \\Color(50% 300 30°)\\."
                         ],
                         ["edit", "Phrase('red' color: 🌈(50% 300 30°))"],

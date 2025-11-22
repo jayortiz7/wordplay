@@ -43,7 +43,8 @@
         "key": "$~anahtar",
         "help": "$~Yardım",
         "feedback": "$~geri bildirim",
-        "how": "$~nasıl"
+        "how": "$~nasıl",
+        "code": "$~kod"
     },
     "token": {
         "EvalOpen": "$~değerlendirme açık",
@@ -3914,6 +3915,10 @@
             "count": {
                 "doc": "$~Dizinin bitmeden önce kaç kez tekrarlanması gerektiği. Sahneye girdiğimde, sahnede hareket ettiğimde veya sahneden çıktığımda bu gerçekten çok yardımcı oluyor, ancak bir dinlenme dizisi için, sonsuza kadar dinlenebildiğim için görmezden geliniyor.",
                 "names": "$~saymak"
+            },
+            "description": {
+                "doc": "$~Animasyonu göremeyen izleyiciler için bu sekansın isteğe bağlı açıklaması.",
+                "names": "$~Tanım"
             }
         },
         "Place": {
@@ -4271,7 +4276,9 @@
                 "history": {
                     "on": "$~son proje kodunu göster",
                     "off": "$~mevcut proje kodunu göster"
-                }
+                },
+                "savedLocally": "$~projeler yerel olarak kaydedilir, ancak çevrimiçi olarak kaydedilmez",
+                "savedOnline": "$~projeler çevrimiçi olarak kaydedilir"
             },
             "field": {
                 "name": {
@@ -4396,7 +4403,9 @@
             },
             "button": {
                 "selectOutput": "$~bu çıktıyı sahnede göster",
-                "expandSequence": "$~bu daraltılmış kodu genişlet"
+                "expandSequence": "$~bu daraltılmış kodu genişlet",
+                "expandControls": "$~ek düzenleme komutlarını göster",
+                "collapseControls": "$~ek düzenleme komutlarını gizle"
             },
             "field": {
                 "name": {
@@ -4463,7 +4472,8 @@
                 "expandBeforeInline": "$~seçimi genişletmeden önce",
                 "expandAfterInline": "$~seçimi genişlet",
                 "expandPriorLine": "$~seçimi önceki satıra genişlet",
-                "expandNextLine": "$~seçimi bir sonraki satıra genişlet"
+                "expandNextLine": "$~seçimi bir sonraki satıra genişlet",
+                "largeDelete": "$~Bu seçimi silmek istediğinizden emin misiniz? Fikrinizi değiştirirseniz geri al düğmesini (↺) kullanabilirsiniz."
             },
             "options": {
                 "locale": {
@@ -4515,7 +4525,8 @@
                 "submit": "$~bu sohbet mesajını gönder"
             },
             "options": {
-                "locale": "$~çıktı için dili seçin"
+                "locale": "$~çıktı için dili seçin",
+                "default": "$~varsayılan"
             }
         },
         "timeline": {
@@ -4634,7 +4645,14 @@
                 "mode": {
                     "layout": {
                         "label": "$~düzen",
-                        "modes": ["$~otomatik", "$~yatay", "$~dikey", "$~özgür"]
+                        "modes": [
+                            "$~fayansları otomatik olarak yerleştir",
+                            "$~yatay ekran düzeni",
+                            "$~dikey ekran düzeni",
+                            "$~en son iki fayans, yan yana",
+                            "$~sadece en son fayans",
+                            "$~bir tuval üzerinde taşınabilir ve yeniden boyutlandırılabilir fayanslar"
+                        ]
                     },
                     "animate": {
                         "label": "$~animasyonlar",
@@ -4683,7 +4701,8 @@
                 "options": {
                     "face": "$~yazı tipi",
                     "mic": "$~seçili mikrofon",
-                    "camera": "$~seçili kamera"
+                    "camera": "$~seçili kamera",
+                    "default": "$~varsayılan"
                 }
             },
             "locale": {
@@ -5414,6 +5433,10 @@
                     "fit": {
                         "label": "$~yerleştirmek",
                         "tip": "$~şekilleri tuvale uydur"
+                    },
+                    "dismissError": {
+                        "label": "$~azletmek",
+                        "tip": "$~hata mesajını kapat"
                     }
                 },
                 "feedback": {
@@ -5424,7 +5447,8 @@
                     "notfound": "$~Bu karakter mevcut değil.",
                     "unauthenticated": "$~Bir karakteri düzenlemek için giriş yapmış olmanız gerekir.",
                     "taken": "$~Zaten bu isimde bir karakteriniz var; kaydedilemiyor.",
-                    "unsaved": "$~Bu karaktere bir açıklama ve kaydedilecek geçerli, benzersiz bir ad verin."
+                    "projecteditfail": "$~Bu karakteri kullanan projeler güncellenirken bir sorun oluştu. Aşağıdaki projelerin düzeltilmesi gerekiyor:",
+                    "untitledproject": "$~Başlıksız Proje"
                 },
                 "announce": {
                     "position": "$~1$'dan 2$'a",
@@ -5466,7 +5490,8 @@
             "unwrap": "$~açmak",
             "bind": "$~bu ifadeyi adlandırın",
             "range": "$~1$'dan $2'a kadar seçim",
-            "show": "$~… daha fazlasını göster"
+            "show": "$~… daha fazlasını göster",
+            "area": "$~tip kodu"
         },
         "template": {
             "unwritten": "$~Belirsiz",
@@ -5505,7 +5530,12 @@
             "skip": {
                 "tip": "$~Bu projeyi atla",
                 "label": "$~atlamak"
-            }
+            },
+            "property": "$~Projenin bu özelliğe sahip olup olmadığı"
+        },
+        "done": "$~Başka ölçülecek bir şey yok!",
+        "error": {
+            "notmod": "$~Moderatör olmadığınız anlaşılıyor. Yakın zamanda moderatör ayrıcalıkları verildiyse, tekrar oturum açmanız gerekebilir. Verilmediyse, moderasyon ayrıcalıklarının nasıl talep edileceğine dair wiki'ye bakın."
         }
     },
     "gallery": {

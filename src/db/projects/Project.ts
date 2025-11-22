@@ -676,11 +676,23 @@ export default class Project {
         return this.withSources([[oldSource, newSource]]);
     }
 
-    /** Copies this project, but with the new locale added if it's not already included. */
+    /** Copies this project, but with the new locale added if it's not already included, placing new locales in the front, and the remainder at the end. */
     withLocales(locales: LocaleText[]) {
         return new Project({
             ...this.data,
-            locales: Array.from(new Set([...this.data.locales, ...locales])),
+            locales: [
+                // New locales
+                ...locales,
+                // Locales that aren't the locales in the list above, in their current order.
+                ...this.data.locales.filter(
+                    (l1) =>
+                        !locales.some(
+                            (l2) =>
+                                l2.language === l1.language &&
+                                l2.regions.join() === l1.regions.join(),
+                        ),
+                ),
+            ],
         });
     }
 
@@ -748,29 +760,32 @@ export default class Project {
         for (const [original, replacement] of nodes) {
             const source = this.getSourceOf(original);
             if (source === undefined) {
-                console.error("Couldn't find source of node being replaced");
-                return this;
-            }
-            // Check if we made a new source already.
-            const sources = replacementSources.find(
-                ([original]) => original === source,
-            );
-            // If not, create a new one, mapping the original to the new source.
-            if (sources === undefined)
-                replacementSources.push([
-                    source,
-                    source.replace(original, replacement),
-                    replacement === undefined
-                        ? (source.getNodeFirstPosition(original) ?? 0)
-                        : replacement,
-                ]);
-            // Update the replacement source with the next replacement.
-            else {
-                sources[1] = sources[1].replace(original, replacement);
-                sources[2] =
-                    replacement === undefined
-                        ? (source.getNodeFirstPosition(original) ?? 0)
-                        : replacement;
+                console.error(
+                    "Couldn't find source of node being replaced: ",
+                    original.toWordplay(),
+                );
+            } else {
+                // Check if we made a new source already.
+                const sources = replacementSources.find(
+                    ([original]) => original === source,
+                );
+                // If not, create a new one, mapping the original to the new source.
+                if (sources === undefined)
+                    replacementSources.push([
+                        source,
+                        source.replace(original, replacement),
+                        replacement === undefined
+                            ? (source.getNodeFirstPosition(original) ?? 0)
+                            : replacement,
+                    ]);
+                // Update the replacement source with the next replacement.
+                else {
+                    sources[1] = sources[1].replace(original, replacement);
+                    sources[2] =
+                        replacement === undefined
+                            ? (source.getNodeFirstPosition(original) ?? 0)
+                            : replacement;
+                }
             }
         }
 

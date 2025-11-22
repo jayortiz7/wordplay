@@ -3,6 +3,213 @@
 We'll note all notable changes in this file, including bug fixes, enhancements, and all closed issues.
 Dates are in `YYYY-MM-DD` format and versions are in [semantic versioning](http://semver.org/) format.
 
+## 0.6.33
+
+### Fixed
+
+- Fixed #855: Show editor and output locale chooser when there is at least one explicit tag.
+- Fixed #856: Added standard tooltip and drop down arrow to options.
+- Fixed #852: Prefer full names over symbolic names in translation.
+
+### Maintenance
+
+- Removed unused `firebase-functions`, `@types/npm`, and `@types/uuid` dependencies.
+- Updated minor versions of Svelte, SvelteKit, svelte-check, vitest, Firebase.
+
+## 0.6.32
+
+### Maintenance
+
+- Updated minor version of Svelte.
+
+## 0.6.31
+
+### Fixed
+
+- Fixed #854, accounting for lack of COLRv1 support in Safari.
+
+### Maintenance
+
+- Updated minor versions of firebase-admin, svelte, vite
+- Updated to vitest 4.
+
+## 0.6.30
+
+### Maintenance
+
+- Ensure types exist before Playwright tests.
+- Fixed font-size in footer. For some reason we made it small.
+- Updated minor versions of Svelte, SvelteKit, Firebase, vitest, nodemailer, firebase-functions.
+- Improved styling of drop down size
+- Fixed settings label layout.
+- Consistent language descriptions in locale choosers.
+
+## 0.6.29
+
+### Maintenance
+
+- Updated minor versions of Axe, Svelte, SvelteKit, firebase-functions, vite, vitest.
+- Fixed #840: improved source tile toggle contrast and labels.
+- Fixed #841: improved concept group expand/collapse visual design.
+- Don't permit whitespace wrap in subheaders.
+- Fixed #843: Don't give tutorial projects a name, in case locale changes.
+- Fixed #845: Resolved sticky tutorial navigation when concept link clicked.
+
+## 0.6.28
+
+### Fixed
+
+- Fixed login regression introduced by Svelte regression.
+
+## 0.6.27
+
+### Fixed
+
+- Made undo, redo buttons important, other navigation commands unimportant.
+- Fixed #838: Consume enter/space after glyph insertion in editor.
+- Prevent jiggle of creator view in project footer after edits.
+- Fixed #839: Ensure correct locales in Project basis to match documentation to selected locale.
+
+### Maintenance
+
+- Updated minor versions of Axe, Google Translate, Svelte, chalk, decimal.js, dexie, firebase, prettier, typescript, vite, vitest, zod.
+
+## 0.6.26
+
+### Maintenance
+
+- Updated minor versions of Svelte, SvelteKit, vite-plugin-svelte, svelte-check, tsx, vite, playwright
+
+## 0.6.25
+
+### Maintenance
+
+- Updated Svelte, SvelteKit, Firebase, vite, zod, and some type definitions.
+
+## 0.6.24
+
+### Maintenance
+
+- Updated svelte, @sveltejs/vite-plugin-svelte, @sveltejs/kit, chalk
+
+## 0.6.23
+
+### Fixed
+
+- Eliminated hidden dependency crashing editor.
+
+### Maintenance
+
+- Updated minor versions of Svelte, SvelteKit, Vite.
+- Updated uuid to 12.
+- Error reporting on TileView failure.
+
+## 0.6.22
+
+### Fixed
+
+- Improved tooltip on concept links.
+- Fixed type error on Volume.
+- Hide tooltip if target is removed from DOM.
+
+### Maintenance
+
+- Updated minor versions of zod, vite, Typescript, Svelte, Firebase, Firebase Admin, Dexie, Playwright.
+
+## 0.6.21
+
+### Added
+
+- #815: Added coordinates to axes when grid is on.
+
+### Fixed
+
+- Save characters even without name and description to prevent data loss.
+- Typos in documentation and tutorial.
+- Fixed infinite recursion in Scenes.
+
+### Maintenance
+
+- Updated minor versions of Google Translate, Playwright, Svelte, SvelteKit, Firebase.
+- Update major versions of vite and vite-plugin-svelte.
+- Updated to Firebase 12.
+- Updated to Zod 4.
+
+## 0.6.20
+
+## Added
+
+- Fixed #810, implementing responsive layout for mobile and tablets.
+
+## Fixed
+
+- Clarified tooltips for save status.
+- More robust node replacement when source isn't found.
+- Consistent mono locale emojis.
+- Unset locale after translating project.
+- Don't translate texts that are supposed to be one of a literal text type.
+
+## Maintenance
+
+- Updated Svelte, SvelteKit, vite, prettier
+- Removed eslint (it was unused)
+
+## 0.6.19
+
+## Added
+
+- Fixed #536: More discoverable tooltips.
+
+## Fixed
+
+- Fixed #792: Broken links to node concepts in guide.
+- Fixed #805: Clarify meaning of camera and microphone chooser.
+- Fixed several defects in how to translation, respecting file and markup structure.
+- Ensure code examples are localized.
+- Fixed #801: Slightly more visible concept link underlines, consistent with other links.
+- Fixed #751: Corrected inconsistency in simplified Chinese locale login screen.
+- Fixed #803: Adjusted behavior of code examples in standalone guide.
+- Fixed name of Noto Korean font file.
+- Fixed #746: Typo in Korean tutorial.
+- Fixed #688: Added aria-label to editor textarea.
+- Fixed concept link font size in Safari.
+- Fixed #338: Reference formatted literals in `Phrase` docs.
+- Fixed #328: Finished localizing moderation page.
+- Fixed #744: Clarifying output locale drop down.
+
+## Maintenance
+
+- Updated Playwright, Svelte, SvleteKit, eslint, firebase, tsx, vitest, zod, nodemailer, firebase admin, Google Translate.
+- Added timeline toolbar tests.
+- Better chunking of build for faster load times.
+
+## 0.6.18
+
+## Added
+
+- Fixed #454, fixed #695: simplifying toolbar buttons.
+- Fixed #470: Custom sequence descriptions for screen readers.
+
+## Fixed
+
+- Preserve regions when repairing locales.
+
+## Maintenance
+
+- Updated Axe, SvelteKit, eslint, Firebase, zod, vitest minor versions.
+
+## 0.6.17
+
+## Fixed
+
+- Updated translation script to permit overriding machine translations with new machine translations.
+- #781: Updated traditional Chinese with correct machine translations.
+- Clear streams resolved to prevent memory leak.
+- #722: Give ARIA-label to `CodeView`.
+- #721: Contrast of values in dark mode.
+- #689: Header contrast over error colors in dark mode.
+- #681: Don't allow end token to be selected.
+
 ## 0.6.16
 
 ## Added
@@ -76,7 +283,7 @@ Dates are in `YYYY-MM-DD` format and versions are in [semantic versioning](http:
 - Fixed #750 only handle keyboard shortcuts when editor is focused.
 - Added choose your own adventure how to.
 
-## Maintennace
+## Maintenace
 
 - Updated minor versions of Playwright, SvelteKit, Eslint, Firebase, Svelte, Vite, Vitest, and Zod.
 
